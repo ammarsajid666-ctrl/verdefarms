@@ -3,10 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Verde Farms - Milk</title>
+<title>Verde Farms</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-body {font-family: Arial; margin:0; background:#f5f5f5}
+body {
+margin:0;
+font-family:'Poppins', sans-serif;
+background:#f8f8f8;
+}
 
 /* Header */
 header {
@@ -15,35 +21,87 @@ color:white;
 padding:15px 40px;
 display:flex;
 justify-content:space-between;
+align-items:center;
+}
+
+.logo {
+font-size:22px;
+font-weight:700;
+}
+
+.btn {
+background:#2e7d32;
+color:white;
+padding:10px 20px;
+border-radius:25px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover {
+background:#1b5e20;
+}
+
+/* Hero */
+.hero {
+background:url('https://images.unsplash.com/photo-1500595046743-cd271d694d30') center/cover;
+color:white;
+padding:120px 40px;
+text-align:left;
+}
+
+.hero h1 {
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p {
+font-size:18px;
+}
+
+/* Offer */
+.offer {
+background:#d4af37;
+padding:20px;
+text-align:center;
+font-weight:bold;
+font-size:18px;
 }
 
 /* Grid */
 .container {
-padding:40px;
+padding:60px 40px;
 display:grid;
-grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+gap:30px;
 }
 
 /* Card */
 .card {
 background:white;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-padding:20px;
-text-align:center;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover {
+transform:translateY(-8px);
 }
 
 .card img {
 width:100%;
 height:220px;
 object-fit:cover;
-border-radius:10px;
+}
+
+.card-content {
+padding:20px;
+text-align:center;
 }
 
 .price {
 margin:10px 0;
-font-size:18px;
 }
 
 .old {
@@ -53,17 +111,8 @@ color:gray;
 
 .new {
 color:#2e7d32;
-font-weight:bold;
-}
-
-/* Button */
-.btn {
-background:#2e7d32;
-color:white;
-padding:10px 20px;
-border-radius:5px;
-text-decoration:none;
-display:inline-block;
+font-weight:700;
+font-size:18px;
 }
 
 /* Footer */
@@ -79,46 +128,62 @@ padding:20px;
 <body>
 
 <header>
-<h1>Verde Farms</h1>
+<div class="logo">Verde Farms</div>
 <a href="https://wa.me/923216568272" class="btn">Order Now</a>
 </header>
+
+<section class="hero">
+<h1>Fresh Full Cream Milk Delivered to Your Door</h1>
+<p>Driven by Purity</p>
+<a href="https://wa.me/923216568272" class="btn">Order on WhatsApp</a>
+</section>
+
+<section class="offer">
+🔥 EARLY BIRD OFFER — Rs. 350 → Rs. 298 (15% OFF + FREE SAMPLE)
+</section>
 
 <div class="container">
 
 <!-- Pouch -->
 <div class="card">
 <img src="https://images.unsplash.com/photo-1604908176997-431a00b64d90">
-<h3>Full Fat Cow Milk (Pouch)</h3>
+<div class="card-content">
+<h3>Pouch Milk</h3>
 <div class="price">
 <span class="old">Rs. 350</span> 
 <span class="new">Rs. 298</span>
 </div>
-<p>Daily use economical milk pouch</p>
-<a href="https://wa.me/923216568272" class="btn">Order on WhatsApp</a>
+<p>Daily use economical milk</p>
+<a href="https://wa.me/923216568272" class="btn">Order</a>
+</div>
 </div>
 
-<!-- Plastic Bottle -->
+<!-- Plastic -->
 <div class="card">
 <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-<h3>Full Fat Cow Milk (Plastic Bottle)</h3>
+<div class="card-content">
+<h3>Plastic Bottle Milk</h3>
 <div class="price">
 <span class="old">Rs. 380</span> 
 <span class="new">Rs. 330</span>
 </div>
-<p>Hygienic & easy to store packaging</p>
-<a href="https://wa.me/923216568272" class="btn">Order on WhatsApp</a>
+<p>Hygienic & convenient</p>
+<a href="https://wa.me/923216568272" class="btn">Order</a>
+</div>
 </div>
 
-<!-- Glass Bottle -->
+<!-- Glass -->
 <div class="card">
 <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc">
-<h3>Full Fat Cow Milk (Glass Bottle)</h3>
+<div class="card-content">
+<h3>Glass Bottle Milk</h3>
 <div class="price">
 <span class="old">Rs. 420</span> 
 <span class="new">Rs. 370</span>
 </div>
-<p>Premium glass bottle for best taste</p>
-<a href="https://wa.me/923216568272" class="btn">Order on WhatsApp</a>
+<p>Premium quality experience</p>
+<a href="https://wa.me/923216568272" class="btn">Order</a>
+</div>
 </div>
 
 </div>

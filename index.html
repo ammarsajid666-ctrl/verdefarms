@@ -8,11 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-margin:0;
-font-family:'Poppins', sans-serif;
-background:#f8f8f8;
-}
+body {margin:0;font-family:'Poppins',sans-serif;background:#f8f8f8}
 
 /* Header */
 header {
@@ -24,10 +20,7 @@ justify-content:space-between;
 align-items:center;
 }
 
-.logo {
-font-size:22px;
-font-weight:700;
-}
+.logo {font-size:22px;font-weight:700}
 
 .btn {
 background:#2e7d32;
@@ -36,25 +29,18 @@ padding:10px 20px;
 border-radius:25px;
 text-decoration:none;
 transition:0.3s;
-display:inline-block;
 }
 
-.btn:hover {
-background:#1b5e20;
-}
+.btn:hover {background:#1b5e20}
 
 /* Hero */
 .hero {
 background:url('https://images.unsplash.com/photo-1500595046743-cd271d694d30') center/cover;
 color:white;
 padding:120px 40px;
-text-align:left;
 }
 
-.hero h1 {
-font-size:42px;
-margin-bottom:10px;
-}
+.hero h1 {font-size:42px}
 
 /* Offer */
 .offer {
@@ -81,14 +67,13 @@ box-shadow:0 5px 20px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
-.card:hover {
-transform:translateY(-8px);
-}
+.card:hover {transform:translateY(-8px)}
 
 .card img {
 width:100%;
-height:220px;
-object-fit:cover;
+height:260px;
+object-fit:contain;
+background:#fff;
 }
 
 .card-content {
@@ -96,19 +81,14 @@ padding:20px;
 text-align:center;
 }
 
-.price {
-margin:10px 0;
-}
+.old {text-decoration:line-through;color:gray}
+.new {color:#2e7d32;font-weight:700}
 
-.old {
-text-decoration:line-through;
-color:gray;
-}
-
-.new {
-color:#2e7d32;
-font-weight:700;
-font-size:18px;
+/* Subscription */
+.subscription {
+padding:60px;
+text-align:center;
+background:#e8f5e9;
 }
 
 /* Footer */
@@ -131,13 +111,10 @@ padding:20px;
 <section class="hero">
 <h1>Fresh Full Cream Milk Delivered to Your Door</h1>
 <p>Driven by Purity</p>
-
-<p style="margin-top:15px;">
-🎁 Get a FREE Sample — Message us on WhatsApp
-</p>
+<p>🎁 Get a FREE Sample — Message us now</p>
 
 <a href="https://wa.me/923216568272" class="btn">Order Now</a>
-<a href="https://wa.me/923216568272?text=Hi%20I%20want%20free%20milk%20sample" class="btn">Get Free Sample</a>
+<a href="https://wa.me/923216568272?text=Hi%20I%20want%20free%20milk%20sample" class="btn">Free Sample</a>
 </section>
 
 <section class="offer">
@@ -148,47 +125,53 @@ padding:20px;
 
 <!-- Pouch -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1604908176997-431a00b64d90">
+<img src="pouch.jpg">
 <div class="card-content">
 <h3>Pouch Milk</h3>
-<div class="price">
-<span class="old">Rs. 350</span> 
-<span class="new">Rs. 298</span>
-</div>
-<p>Economical daily milk</p>
+<p><span class="old">Rs. 350</span> <span class="new">Rs. 298</span></p>
 <a href="https://wa.me/923216568272" class="btn">Order</a>
 </div>
 </div>
 
 <!-- Plastic -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<img src="plastic.jpg">
 <div class="card-content">
 <h3>Plastic Bottle Milk</h3>
-<div class="price">
-<span class="old">Rs. 380</span> 
-<span class="new">Rs. 330</span>
-</div>
-<p>Hygienic & convenient</p>
+<p><span class="old">Rs. 420</span> <span class="new">Rs. 360</span></p>
 <a href="https://wa.me/923216568272" class="btn">Order</a>
 </div>
 </div>
 
 <!-- Glass -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc">
+<img src="glass.jpg">
 <div class="card-content">
 <h3>Glass Bottle Milk</h3>
-<div class="price">
-<span class="old">Rs. 420</span> 
-<span class="new">Rs. 370</span>
-</div>
-<p>Premium quality experience</p>
+<p><span class="old">Rs. 450</span> <span class="new">Rs. 390</span></p>
 <a href="https://wa.me/923216568272" class="btn">Order</a>
 </div>
 </div>
 
 </div>
+
+<!-- Subscription -->
+<section class="subscription">
+<h2>🥛 Daily Milk Subscription</h2>
+<p>Fresh milk delivered every morning</p>
+
+<select style="padding:10px;">
+<option>1 Liter Daily</option>
+<option>2 Liter Daily</option>
+<option>Monthly Plan</option>
+</select>
+
+<br><br>
+
+<a href="https://wa.me/923216568272?text=Hi%20I%20want%20milk%20subscription" class="btn">
+Start Subscription
+</a>
+</section>
 
 <div class="footer">
 <p>📞 +92 321 6568272</p>
@@ -198,10 +181,7 @@ padding:20px;
 <!-- POPUP -->
 <div id="popup" style="
 position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
+top:0;left:0;width:100%;height:100%;
 background:rgba(0,0,0,0.6);
 display:none;
 justify-content:center;
@@ -209,47 +189,36 @@ align-items:center;
 z-index:9999;
 ">
 
-<div style="
-background:white;
-padding:30px;
-border-radius:10px;
-text-align:center;
-max-width:350px;
-width:90%;
-">
-
+<div style="background:white;padding:30px;border-radius:10px;text-align:center;">
 <h2>🎁 FREE MILK SAMPLE</h2>
-<p>Get your free sample today!</p>
-<p><b>Message us on WhatsApp now</b></p>
+<p>Message us on WhatsApp</p>
 
-<a href="https://wa.me/923216568272?text=Hi%20I%20want%20free%20milk%20sample" 
-class="btn">
+<a href="https://wa.me/923216568272?text=Hi%20I%20want%20free%20milk%20sample" class="btn">
 Get Free Sample
 </a>
 
 <br><br>
 
-<button onclick="closePopup()" style="
-background:#ccc;
-border:none;
-padding:8px 15px;
-border-radius:5px;
-cursor:pointer;
-">
-Close
-</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
 
-</div>
-</div>
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/923216568272" style="
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;
+padding:15px;border-radius:50%;
+text-decoration:none;font-size:20px;
+">💬</a>
 
 <script>
-function closePopup() {
-document.getElementById("popup").style.display = "none";
+function closePopup(){
+document.getElementById("popup").style.display="none";
 }
 
-setTimeout(function() {
-document.getElementById("popup").style.display = "flex";
-}, 2000);
+setTimeout(function(){
+document.getElementById("popup").style.display="flex";
+},2000);
 </script>
 
 </body>

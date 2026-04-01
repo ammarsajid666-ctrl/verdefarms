@@ -3,69 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Verde Farms</title>
+<title>Verde Farms - Dairy Products</title>
 
 <style>
-body {margin:0;font-family:Poppins,Arial;background:#f5f5f5}
+body {font-family: Arial; margin:0; background:#f5f5f5}
 
 /* Header */
 header {
 background:#0f3d2e;
 color:white;
-padding:15px;
+padding:15px 40px;
 display:flex;
 justify-content:space-between;
-align-items:center;
-padding:15px 40px;
 }
 
-.logo {font-size:22px;font-weight:bold}
+h1 {margin:0}
 
+/* Grid */
+.container {
+padding:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+gap:25px;
+}
+
+/* Card */
+.card {
+background:white;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+padding:20px;
+text-align:center;
+}
+
+.card img {
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.price {
+margin:10px 0;
+font-size:18px;
+}
+
+.old {
+text-decoration:line-through;
+color:gray;
+}
+
+.new {
+color:#2e7d32;
+font-weight:bold;
+}
+
+/* Button */
 .btn {
 background:#2e7d32;
 color:white;
-padding:12px 25px;
-border-radius:30px;
+padding:10px 20px;
+border-radius:5px;
 text-decoration:none;
-}
-
-/* Hero */
-.hero {
-background:url('https://images.unsplash.com/photo-1500595046743-cd271d694d30') center/cover;
-color:white;
-padding:120px 40px;
-text-align:left;
-}
-
-.hero h1 {font-size:42px}
-
-/* Offer */
-.offer {
-background:#d4af37;
-padding:30px;
-text-align:center;
-font-size:22px;
-}
-
-/* Cards */
-.section {
-padding:60px 20px;
-text-align:center;
-}
-
-.cards {
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.card {
-background:white;
-padding:20px;
-width:250px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+display:inline-block;
 }
 
 /* Footer */
@@ -81,39 +81,49 @@ padding:20px;
 <body>
 
 <header>
-<div class="logo">Verde Farms</div>
+<h1>Verde Farms</h1>
 <a href="https://wa.me/923216568272" class="btn">Order Now</a>
 </header>
 
-<section class="hero">
-<h1>Fresh Full Cream Milk Delivered to Your Door</h1>
-<p>Driven by Purity</p>
+<div class="container">
+
+<!-- Product 1 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<h3>Full Cream Milk (1L)</h3>
+<div class="price">
+<span class="old">Rs. 350</span> 
+<span class="new">Rs. 298</span>
+</div>
+<p>Fresh farm milk delivered daily</p>
 <a href="https://wa.me/923216568272" class="btn">Order on WhatsApp</a>
-</section>
-
-<section class="offer">
-🔥 EARLY BIRD OFFER — Rs. 350 → <b>Rs. 298</b> (15% OFF + FREE SAMPLE)
-</section>
-
-<section class="section">
-<h2>Why Choose Verde Farms?</h2>
-<div class="cards">
-<div class="card">100% Pure Milk</div>
-<div class="card">Fresh Daily Delivery</div>
-<div class="card">Hygienically Processed</div>
-<div class="card">Farm to Home Supply</div>
 </div>
-</section>
 
-<section class="section">
-<h2>What We DON’T Add</h2>
-<div class="cards">
-<div class="card">No Preservatives</div>
-<div class="card">No Powder Milk</div>
-<div class="card">No Chemicals</div>
-<div class="card">No Artificial Thickening</div>
+<!-- Product 2 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604908176997-431a00b64d90">
+<h3>Buffalo Milk (1L)</h3>
+<div class="price">
+<span class="old">Rs. 380</span> 
+<span class="new">Rs. 320</span>
 </div>
-</section>
+<p>Rich & creamy premium milk</p>
+<a href="https://wa.me/923216568272" class="btn">Order on WhatsApp</a>
+</div>
+
+<!-- Product 3 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da">
+<h3>Organic Milk (1L)</h3>
+<div class="price">
+<span class="old">Rs. 400</span> 
+<span class="new">Rs. 340</span>
+</div>
+<p>Pure organic farm milk</p>
+<a href="https://wa.me/923216568272" class="btn">Order on WhatsApp</a>
+</div>
+
+</div>
 
 <div class="footer">
 <p>📞 +92 321 6568272</p>

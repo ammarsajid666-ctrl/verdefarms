@@ -6,73 +6,74 @@
 <title>Verde Farms</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+body {margin:0;font-family:Poppins,Arial;background:#f5f5f5}
 
 /* Header */
 header {
-    background: #0f3d2e;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 26px;
-    font-weight: bold;
+background:#0f3d2e;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+}
+
+.logo {font-size:22px;font-weight:bold}
+
+.btn {
+background:#2e7d32;
+color:white;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
 }
 
 /* Hero */
 .hero {
-    background: url('https://images.unsplash.com/photo-1500595046743-cd271d694d30') center/cover;
-    color: white;
-    text-align: center;
-    padding: 120px 20px;
+background:url('https://images.unsplash.com/photo-1500595046743-cd271d694d30') center/cover;
+color:white;
+padding:120px 40px;
+text-align:left;
 }
 
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 20px;
-}
-
-/* Buttons */
-.btn {
-    background: #2e7d32;
-    color: white;
-    padding: 12px 25px;
-    margin: 10px;
-    display: inline-block;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
+.hero h1 {font-size:42px}
 
 /* Offer */
 .offer {
-    background: #d4af37;
-    text-align: center;
-    padding: 30px;
+background:#d4af37;
+padding:30px;
+text-align:center;
+font-size:22px;
 }
 
-.offer h2 {
-    margin: 0;
-}
-
-/* Sections */
+/* Cards */
 .section {
-    padding: 40px;
-    text-align: center;
+padding:60px 20px;
+text-align:center;
+}
+
+.cards {
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.card {
+background:white;
+padding:20px;
+width:250px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* Footer */
 .footer {
-    background: #0f3d2e;
-    color: white;
-    text-align: center;
-    padding: 20px;
+background:#0f3d2e;
+color:white;
+text-align:center;
+padding:20px;
 }
 </style>
 </head>
@@ -80,47 +81,41 @@ header {
 <body>
 
 <header>
-Verde Farms
+<div class="logo">Verde Farms</div>
+<a href="https://wa.me/923216568272" class="btn">Order Now</a>
 </header>
 
 <section class="hero">
 <h1>Fresh Full Cream Milk Delivered to Your Door</h1>
 <p>Driven by Purity</p>
-
-<a href="https://wa.me/923216568272" class="btn">Order Now</a>
-<a href="#" class="btn">Get Free Sample</a>
+<a href="https://wa.me/923216568272" class="btn">Order on WhatsApp</a>
 </section>
 
 <section class="offer">
-<h2>🔥 EARLY BIRD OFFER</h2>
-<p><strike>Rs. 350</strike> <b>Rs. 298</b></p>
-<p>15% OFF + FREE SAMPLE AVAILABLE</p>
+🔥 EARLY BIRD OFFER — Rs. 350 → <b>Rs. 298</b> (15% OFF + FREE SAMPLE)
 </section>
 
 <section class="section">
 <h2>Why Choose Verde Farms?</h2>
-<p>✔ 100% Pure Milk</p>
-<p>✔ Fresh Daily Delivery</p>
-<p>✔ Hygienically Processed</p>
-<p>✔ Farm to Home Supply</p>
+<div class="cards">
+<div class="card">100% Pure Milk</div>
+<div class="card">Fresh Daily Delivery</div>
+<div class="card">Hygienically Processed</div>
+<div class="card">Farm to Home Supply</div>
+</div>
 </section>
 
 <section class="section">
 <h2>What We DON’T Add</h2>
-<p>❌ No Preservatives</p>
-<p>❌ No Powder Milk</p>
-<p>❌ No Chemicals</p>
-<p>❌ No Artificial Thickening</p>
-</section>
-
-<section class="section">
-<h2>Order Now</h2>
-<a href="https://wa.me/923216568272" class="btn">WhatsApp Now</a>
+<div class="cards">
+<div class="card">No Preservatives</div>
+<div class="card">No Powder Milk</div>
+<div class="card">No Chemicals</div>
+<div class="card">No Artificial Thickening</div>
+</div>
 </section>
 
 <div class="footer">
-<p>Verde Farms</p>
-<p>Driven by Purity</p>
 <p>📞 +92 321 6568272</p>
 <p>DHA Lahore</p>
 </div>

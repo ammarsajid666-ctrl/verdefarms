@@ -36,6 +36,7 @@ padding:10px 20px;
 border-radius:25px;
 text-decoration:none;
 transition:0.3s;
+display:inline-block;
 }
 
 .btn:hover {
@@ -55,17 +56,12 @@ font-size:42px;
 margin-bottom:10px;
 }
 
-.hero p {
-font-size:18px;
-}
-
 /* Offer */
 .offer {
 background:#d4af37;
 padding:20px;
 text-align:center;
 font-weight:bold;
-font-size:18px;
 }
 
 /* Grid */
@@ -135,7 +131,13 @@ padding:20px;
 <section class="hero">
 <h1>Fresh Full Cream Milk Delivered to Your Door</h1>
 <p>Driven by Purity</p>
-<a href="https://wa.me/923216568272" class="btn">Order on WhatsApp</a>
+
+<p style="margin-top:15px;">
+🎁 Get a FREE Sample — Message us on WhatsApp
+</p>
+
+<a href="https://wa.me/923216568272" class="btn">Order Now</a>
+<a href="https://wa.me/923216568272?text=Hi%20I%20want%20free%20milk%20sample" class="btn">Get Free Sample</a>
 </section>
 
 <section class="offer">
@@ -153,7 +155,7 @@ padding:20px;
 <span class="old">Rs. 350</span> 
 <span class="new">Rs. 298</span>
 </div>
-<p>Daily use economical milk</p>
+<p>Economical daily milk</p>
 <a href="https://wa.me/923216568272" class="btn">Order</a>
 </div>
 </div>
@@ -192,6 +194,63 @@ padding:20px;
 <p>📞 +92 321 6568272</p>
 <p>DHA Lahore</p>
 </div>
+
+<!-- POPUP -->
+<div id="popup" style="
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+">
+
+<div style="
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+max-width:350px;
+width:90%;
+">
+
+<h2>🎁 FREE MILK SAMPLE</h2>
+<p>Get your free sample today!</p>
+<p><b>Message us on WhatsApp now</b></p>
+
+<a href="https://wa.me/923216568272?text=Hi%20I%20want%20free%20milk%20sample" 
+class="btn">
+Get Free Sample
+</a>
+
+<br><br>
+
+<button onclick="closePopup()" style="
+background:#ccc;
+border:none;
+padding:8px 15px;
+border-radius:5px;
+cursor:pointer;
+">
+Close
+</button>
+
+</div>
+</div>
+
+<script>
+function closePopup() {
+document.getElementById("popup").style.display = "none";
+}
+
+setTimeout(function() {
+document.getElementById("popup").style.display = "flex";
+}, 2000);
+</script>
 
 </body>
 </html>
